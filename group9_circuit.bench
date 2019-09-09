@@ -2,3 +2,32 @@
 # 4 outputs
 # The 6 inputs are technically two separate, 3 bit inputs
 
+# INPUTS:
+
+INPUT(A0)
+INPUT(B0)
+INPUT(A1)
+INPUT(B1)
+INPUT(A2)
+INPUT(B2)
+
+
+# OUTPUTS:
+OUTPUT(S0)
+OUTPUT(S1)
+OUTPUT(S2)
+OUTPUT(Cout2)
+
+# GATES: 
+S0 = XOR(A0, B0)
+S1 = XOR(Cout0, A1, B1)
+S2 = XOR(Cout1, A2, B2)	
+Cout0 = AND(A0, B0)
+Cout1 = OR(e, f) 
+Cout2 = OR(h, i)
+d = OR(A1, B1)
+e = AND(A1, B1)
+f = AND(Cout0, d)
+g = OR(A2, B2)
+h = AND(A2, B2)
+i = AND(Cout1, g)
